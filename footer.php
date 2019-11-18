@@ -26,7 +26,7 @@ $footer_section = get_section_mods( 'footer' );
 								<?php
 									wp_nav_menu(
 										array(
-											'theme_location'   => 'menu-footer',
+											'theme_location'   => 'menu-contact-footer',
 											'menu_class'        => 'footer-menu footer-menu-' . strtolower( $footer_section->footer_menu_title ),
 										)
 									);
@@ -94,7 +94,7 @@ $footer_section = get_section_mods( 'footer' );
 				<div class="col col-12 col-md-6">
 					<?php
 						/* Printing copyright date */
-						echo sprintf( esc_html__( '%2$s %1$s juancarloswebsites', 'juancarloswebsites' ), date( 'Y' ), '&copy;' );
+						echo sprintf( esc_html__( '%2$s %1$s The Worx', 'juancarloswebsites' ), date( 'Y' ), '&copy;' );
 					?>
 				<span class="sep"> | </span>
 					<?php

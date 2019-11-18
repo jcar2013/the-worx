@@ -95,9 +95,24 @@
 				height: 60px;
 				@include prefix( transition, $trans_25, webkit moz o);
 
+				/* Add Theme Custome Menu button here */
+
+				// Default button
 				a {
 					width: 100%;
 					color: white;
+				}
+
+				// CTA menu button transparent
+				&.cta-menu-btn a {
+					border-style: outset;
+					border-radius: 15px;
+					border-width: 1.5px;
+					padding: 4px 10px;
+
+					&:hover {
+						border-style: inset;
+					}
 				}
 
 				ul {
@@ -167,7 +182,7 @@
 				}
 
 				&:hover {
-					color: #dad3a2;
+					color: #ffffff;
 				}
 			}
 			
@@ -349,6 +364,7 @@
 /*----------  Header Slider  ----------*/
 section.header-slider-section {
 	position: relative;
+	overflow: hidden;
 	height: 100vh;
 	@include prefix( transition, $trans_1, o moz webkit );
 
