@@ -22,9 +22,6 @@ get_header();
 
 		/* This gets the slides as an object */
 		$top_slider = get_section_mods( 'top' );
-		echo "<pre>\n";
-		print_r( $top_slider );
-		echo "</pre>\n";
 
 		/* This checks for slider object in order to parse slider section */
 		if ( ! empty( $top_slider ) ) :
