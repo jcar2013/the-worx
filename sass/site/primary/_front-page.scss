@@ -46,6 +46,10 @@ section.services {
   justify-content: center;
   align-items: center;
 
+  .service-title {
+    font-family: $font__teko;;
+  }
+
   .card {
     background: rgba($color: #131f2f, $alpha: .95);
     

@@ -22,6 +22,9 @@ get_header();
 
 		/* This gets the slides as an object */
 		$top_slider = get_section_mods( 'top' );
+		echo "<pre>\n";
+		print_r( $top_slider );
+		echo "</pre>\n";
 
 		/* This checks for slider object in order to parse slider section */
 		if ( ! empty( $top_slider ) ) :
@@ -148,8 +151,8 @@ get_header();
 
 
 				<div class="row wonka-row">
-					<div class="col-12 text-center title-wrap">
-						<h3 class="section-title our-cause-title"><?php echo wp_kses_data( $services_section->services_mods->services_section_header ); ?></h3>
+					<div class="col-12 text-center">
+						<h3 class="service-title"><?php echo wp_kses_data( $services_section->services_mods->services_section_header ); ?></h3>
 					</div>
 				</div>
 				<div class="row wonka-row justify-content-center text-center">
