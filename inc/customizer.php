@@ -353,8 +353,607 @@ function the_worx_customize_register( $wp_customize ) {
 
 	endfor;
 
+	/**
+	* Enable topbar message settings Section
+	*
+	* @since  1.0.0
+	*/
+	$wp_customize->add_setting(
+		'enable_hero_popup',
+		array(
+			'default'   => '',
+			'transport' => 'refresh',
+		)
+	);
+
+	// Enable topbar message Setting Control.
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'enable_hero_popup_control',
+			array(
+				'label'       => __( 'Pop up Option', 'the-worx' ),
+				'section'     => 'slider_section',
+				'settings'    => 'enable_hero_popup',
+				'type'        => 'checkbox',
+				'description' => 'Enable Hero Image Pop Up',
+			)
+		)
+	);
+
+	/**
+	* Top Slider pop up 3 descriptions settings Section
+	*
+	* @since  1.0.0
+	*/
+	for ( $a = 1; $a <= 3; $a++ ) :
+		/**
+			* Top Slider pop up 3 Descriptions title settings
+			*
+			* @since  1.0.0
+			*/
+		$wp_customize->add_setting(
+			'top_slider_description_title_' . $a,
+			array(
+				'default'   => '',
+				'transport' => 'refresh',
+			)
+		);
+
+		// Slider descriptions title Setting Control.
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'top_slider_description_title_' . $a . '_control',
+				array(
+					'label'       => 'Top slider popup description Title #' . $a,
+					'section'     => 'slider_section',
+					'settings'    => 'top_slider_description_title_' . $a,
+					'type'        => 'text',
+					'description' => 'Add Title for top popup discrption #' . $a,
+				)
+			)
+		);
 
 		/**
+		* Top Slider popup 3 Description messages settings Section
+		*
+		* @since  1.0.0
+		*/
+		$wp_customize->add_setting(
+			'top_slider_description_message' . $a,
+			array(
+				'default'   => '',
+				'transport' => 'refresh',
+			)
+		);
+
+		// Top Slider popup description message Setting Control.
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'top_slider_description_message' . $a . '_control',
+				array(
+					'label'       => 'Top slider popup description message #' . $a,
+					'section'     => 'slider_section',
+					'settings'    => 'top_slider_description_message' . $a,
+					'type'        => 'text',
+					'description' => 'Add message for top popup discrption #' . $a,
+				)
+			)
+		);
+
+	endfor;
+
+	/**
+	* CTA Popup button text settings Section
+	*
+	* @since  1.0.0
+	*/
+	$wp_customize->add_setting(
+		'cta_popup_btn_text',
+		array(
+			'default'   => '',
+			'transport' => 'refresh',
+		)
+	);
+
+	// Popup button text Setting Control.
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'cta_popup_btn_text_control',
+			array(
+				'label'       => 'CTA Popup Button Text',
+				'section'     => 'slider_section',
+				'settings'    => 'cta_popup_btn_text',
+				'type'        => 'text',
+				'description' => 'Add Top CTA Popup button Text',
+			)
+		)
+	);
+
+		/**
+		* CTA Popup link settings Section
+		*
+		* @since  1.0.0
+		*/
+	$wp_customize->add_setting(
+		'cta_popup_btn_link',
+		array(
+			'default'   => '',
+			'transport' => 'refresh',
+		)
+	);
+
+	// CTA Popup link Setting Control.
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'cta_popup_btn_link_control',
+			array(
+				'label'       => 'CTA Popup Link',
+				'section'     => 'slider_section',
+				'settings'    => '	',
+				'type'        => 'text',
+				'description' => 'Ex: https://yourlink.com',
+			)
+		)
+	);
+
+		/**
+	* About Me settings Section
+	*
+	* @since  1.0.0
+	*/
+	$wp_customize->add_section(
+		'about_me_section',
+		array(
+			'capability'     => 'edit_theme_options',
+			'theme_supports' => '',
+			'priority'     => 10,
+			'title'      => __( 'About Me Section', 'the_worx' ),
+			'description'  => __( 'About Me Section Options version 1.0.0', 'the_worx' ),
+			'panel'      => 'the_worx_theme_options',
+		)
+	);
+
+	/**
+	* About Me header settings Section
+	*
+	* @since  1.0.0
+	*/
+	$wp_customize->add_setting(
+		'about_me_header',
+		array(
+			'default'           => '',
+			'transport'         => 'refresh',
+		)
+	);
+
+	// About Me header Setting Control.
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'about_me_header_control',
+			array(
+				'label'       => __( 'About Me header', 'the_worx' ),
+				'section'     => 'about_me_section',
+				'settings'    => 'about_me_header',
+				'type'      => 'text',
+				'description' => 'About Me header',
+			)
+		)
+	);
+
+	/**
+	 * About Me message settings Section
+	 *
+	 * @since  1.0.0
+	 */
+	$wp_customize->add_setting(
+		'about_me_message',
+		array(
+			'default'   => '',
+			'transport' => 'refresh',
+		)
+	);
+
+	// About Me message Setting Control.
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'about_me_message_control',
+			array(
+				'label'       => __( 'About Me message', 'the_worx' ),
+				'section'     => 'about_me_section',
+				'settings'    => 'about_me_message',
+				'type'        => 'textarea',
+				'description' => 'Add About Me message',
+			)
+		)
+	);
+
+	// Github button text control.
+	$wp_customize->add_setting(
+		'github_btn_text',
+		array(
+			'default'           => '',
+			'transport'         => 'refresh',
+		)
+	);
+
+	// Github button text Setting Control.
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'github_btn_text_control',
+			array(
+				'label'       => __( 'Github Button Text', 'the_worx' ),
+				'section'     => 'about_me_section',
+				'settings'    => 'github_btn_text',
+				'type'        => 'text',
+				'description' => 'Add Github button Text ',
+			)
+		)
+	);
+
+	// About Me github button link Setting.
+	$wp_customize->add_setting(
+		'github_btn_link',
+		array(
+			'default'           => '',
+			'transport'         => 'refresh',
+		)
+	);
+
+	// About Me github button link Setting Control.
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'github_btn_link_control',
+			array(
+				'label'       => __( 'Github Profile Button Link', 'the_worx' ),
+				'section'     => 'about_me_section',
+				'settings'    => 'github_btn_link',
+				'type'        => 'text',
+				'description' => 'Example: https://github.com/user',
+			)
+		)
+	);
+	
+
+	/**
+	* Our Services settings Section
+	*
+	* @since  1.0.0
+	*/
+	$wp_customize->add_section(
+		'services_section',
+		array(
+			'capability'     => 'edit_theme_options',
+			'theme_supports' => '',
+			'priority'     => 10,
+			'title'      => __( 'Our Services Section', 'the_worx' ),
+			'description'  => __( 'Our Services Section Options version 1.0.0', 'the_worx' ),
+			'panel'      => 'the_worx_theme_options',
+		)
+	);
+
+	// Service Section Background image Setting.
+	$wp_customize->add_setting(
+		'services_background_image',
+		array(
+			'default'           => '',
+			'transport'         => 'refresh',
+		)
+	);
+
+	// Service Section Background image Setting Control.
+	$wp_customize->add_control(
+		new WP_Customize_Media_Control(
+			$wp_customize,
+			'services_background_image_control',
+			array(
+				'label'       => 'Services Section Background Image ' . $i,
+				'section'     => 'services_section',
+				'settings'    => 'services_background_image',
+				'type'      => 'image',
+				'description' => 'Add Background image for Services Section ' . $i,
+			)
+		)
+	);
+
+	/**
+	* Services Section header settings Section
+	*
+	* @since  1.0.0
+	*/
+	$wp_customize->add_setting(
+		'our_services_title',
+		array(
+			'default'           => '',
+			'transport'         => 'refresh',
+		)
+	);
+
+	// Services Section header Setting Control.
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'our_services_title_control',
+			array(
+				'label'       => __( 'Services Section Header ', 'the_worx' ),
+				'section'     => 'services_section',
+				'settings'    => 'our_services_title',
+				'type'      => 'text',
+				'description' => 'Add Service Section Header',
+			)
+		)
+	);
+
+			/**
+	* Services Section header settings Section
+	*
+	* @since  1.0.0
+	*/
+	$wp_customize->add_setting(
+		'our_services_subtitle',
+		array(
+			'default'           => '',
+			'transport'         => 'refresh',
+		)
+	);
+
+	// Services Section header Setting Control.
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'our_services_subtitle_control',
+			array(
+				'label'       => __( 'Services Section Sub-Header ', 'the_worx' ),
+				'section'     => 'services_section',
+				'settings'    => 'our_services_subtitle',
+				'type'      => 'text',
+				'description' => 'Add Service Section Sub-Header',
+			)
+		)
+	);
+
+	/**
+	* Our Services card. Loop for 3 descriptions settings Section
+	*
+	* @since  1.0.0
+	*/
+	for ( $i = 1; $i <= 3; $i++ ):
+
+		/**
+		* Services header settings Section
+		*
+		* @since  1.0.0
+		*/
+		$wp_customize->add_setting(
+			'our_services_title_' . $i,
+			array(
+				'default'           => '',
+				'transport'         => 'refresh',
+			)
+		);
+
+		// Services header Setting Control.
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'our_services_title_' . $i . '_control',
+				array(
+					'label'       => __( 'Our Services Title #' . $i, 'the_worx' ),
+					'section'     => 'services_section',
+					'settings'    => 'our_services_title_' . $i,
+					'type'      => 'text',
+					'description' => 'Add Service title #' . $i,
+				)
+			)
+		);
+
+		/**
+		* Services Price settings Section
+		*
+		* @since  1.0.0
+		*/
+		$wp_customize->add_setting(
+			'our_services_price_' . $i,
+			array(
+				'default'           => '',
+				'transport'         => 'refresh',
+			)
+		);
+
+		// Services Price Setting Control.
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'our_services_price_' . $i . '_control',
+				array(
+					'label'       => __( 'Our Services Price #' . $i, 'the_worx' ),
+					'section'     => 'services_section',
+					'settings'    => 'our_services_price_' . $i,
+					'type'      => 'text',
+					'description' => 'Add Service Price #' . $i,
+				)
+			)
+		);
+
+		/**
+		* Service Description 1 settings Section
+		*
+		* @since  1.0.0
+		*/
+		$wp_customize->add_setting(
+			'service_' . $i . '_description_1',
+			array(
+				'default'   => '',
+				'transport' => 'refresh',
+			)
+		);
+
+		// Service Description 1 Setting Control.
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'service_' . $i . '_description_1_control',
+				array(
+					'label'       => __( 'Service ' . $i . ' Description 1', 'the_worx' ),
+					'section'     => 'services_section',
+					'settings'    => 'service_' . $i . '_description_1',
+					'type'        => 'text',
+					'description' => 'Add single Description for service #' . $i,
+				)
+			)
+		);
+
+		/**
+		* Service Description 2 settings Section
+		*
+		* @since  1.0.0
+		*/
+		$wp_customize->add_setting(
+			'service_' . $i . '_description_2',
+			array(
+				'default'   => '',
+				'transport' => 'refresh',
+			)
+		);
+
+		// Service Description 2 Setting Control.
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'service_' . $i . '_description_2_control',
+				array(
+					'label'       => __( 'Service ' . $i . ' Description 2', 'the_worx' ),
+					'section'     => 'services_section',
+					'settings'    => 'service_' . $i . '_description_2',
+					'type'        => 'text',
+					'description' => 'Add single Description for service #' . $i,
+				)
+			)
+		);
+
+		/**
+		* Service Description 3 settings Section
+		*
+		* @since  1.0.0
+		*/
+		$wp_customize->add_setting(
+			'service_' . $i . '_description_3',
+			array(
+				'default'   => '',
+				'transport' => 'refresh',
+			)
+		);
+
+		// Service Description 3 Setting Control.
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'service_' . $i . '_description_3_control',
+				array(
+					'label'       => __( 'Service ' . $i . ' Description 3', 'the_worx' ),
+					'section'     => 'services_section',
+					'settings'    => 'service_' . $i . '_description_3',
+					'type'        => 'text',
+					'description' => 'Add single Description for service #' . $i,
+				)
+			)
+		);
+
+		/**
+		* Service Description 4 settings Section
+		*
+		* @since  1.0.0
+		*/
+		$wp_customize->add_setting(
+			'service_' . $i . '_description_4',
+			array(
+				'default'   => '',
+				'transport' => 'refresh',
+			)
+		);
+
+		// Service Description 4 Setting Control.
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'service_' . $i . '_description_4_control',
+				array(
+					'label'       => __( 'Service ' . $i . ' Description 4', 'the_worx' ),
+					'section'     => 'services_section',
+					'settings'    => 'service_' . $i . '_description_4',
+					'type'        => 'text',
+					'description' => 'Add single Description for service #' . $i,
+				)
+			)
+		);
+
+		/**
+		* Service Description 5 settings Section
+		*
+		* @since  1.0.0
+		*/
+		$wp_customize->add_setting(
+			'service_' . $i . '_description_5',
+			array(
+				'default'   => '',
+				'transport' => 'refresh',
+			)
+		);
+
+		// Service Description 5 Setting Control.
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'service_' . $i . '_description_5_control',
+				array(
+					'label'       => __( 'Service ' . $i . ' Description 5', 'the_worx' ),
+					'section'     => 'services_section',
+					'settings'    => 'service_' . $i . '_description_5',
+					'type'        => 'text',
+					'description' => 'Add single Description for service #' . $i,
+				)
+			)
+		);
+
+		/**
+		* Service Description 6 settings Section
+		*
+		* @since  1.0.0
+		*/
+		$wp_customize->add_setting(
+			'service_' . $i . '_description_6',
+			array(
+				'default'   => '',
+				'transport' => 'refresh',
+			)
+		);
+
+		// Service Description 6 Setting Control.
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'service_' . $i . '_description_6_control',
+				array(
+					'label'       => __( 'Service ' . $i . ' Description 6', 'the_worx' ),
+					'section'     => 'services_section',
+					'settings'    => 'service_' . $i . '_description_6',
+					'type'        => 'text',
+					'description' => 'Add single Description for service #' . $i,
+				)
+			)
+		);
+
+	endfor;
+
+	/**
 	 * Footer settings Section
 	 *
 	 * @since  1.0.0

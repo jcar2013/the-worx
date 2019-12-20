@@ -383,6 +383,7 @@ section.header-slider-section {
 			div.top-slide-img-holder {
 				background-position: center center;
 				background-repeat: no-repeat;
+				background-size: cover;
 				@include prefix( background-size, cover, o moz webkit );
 				width: 100%;
 				height: 100%;
@@ -414,21 +415,21 @@ section.header-slider-section {
 
 						.text-box {
 							font-weight: bold;
-							color: #fffcfc;
+							color: #c5c5c5;
 							max-width: 1200px;
 							@include prefix( text-shadow, 1px 1px 2px rgba( #000, .8 ), o moz webkit );
 
 							h2 {
 								margin: 0 auto;
-								font-weight: 800;
+								font-weight: 600;
 								line-height: 50px;
 								// letter-spacing: 4px;
 								margin-bottom: 25px;
-								font-family: $font__heading;
+								font-family: $font__title;
 								@include font-size( 1.5 );
 							}
 							h4 {
-								font-family: $font__mont;
+								font-family: $font__teko;
 								font-weight: 400;
 								font-style: italic;
 								line-height: 22px;

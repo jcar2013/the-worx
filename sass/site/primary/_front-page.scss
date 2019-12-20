@@ -1,0 +1,60 @@
+/*======================================       Top slider popu box      =====================================*/
+.top-slider-booknow {
+  width: 100%;;
+  position: absolute;
+  bottom: -25px;
+  display: flex;
+  justify-content: center;
+  z-index: 15;
+  // background: rgba($color: #000000, $alpha: .8);
+
+  .booknow-row {
+    max-width: 1000px;
+    border-radius: 10px;
+    color: #c5c5c5;
+    background: rgba($color: #131f2f, $alpha: .9);
+
+    .booknow-service-col{
+      display: grid;
+      justify-content: center;
+      text-align: center;
+
+      h2 {
+        font-family: $font__teko;
+      }
+    }
+  }
+}
+
+/*------------------ About me  ------------------*/
+section.about {
+  padding: 8rem 0;
+  background: #070606;
+  color: #c5c5c5;
+}
+/*------------------ End About me  ------------------*/
+
+/*------------------ Services  ------------------*/
+section.services {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  color: #c5c5c5;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    background: rgba($color: #131f2f, $alpha: .95);
+    
+    ul.list-group {
+
+      li {
+        background: inherit;
+      }
+    }
+  }
+}
+/*------------------ End Services  ------------------*/
