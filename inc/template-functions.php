@@ -56,37 +56,40 @@ function the_mods_for_section( $section ) {
 	$mods_class = new stdClass();
 	$count = 0;
 	if ( 'top' === $section ) :
-		$mods_class->slides              = new stdClass();
-		for ( $i = 1; $i <= 5; $i++ ) {
-			if ( ! empty( get_theme_mod( 'slider_' . $i ) ) ) :
-				$count++;
-				$slide                       = new stdClass();
-				$slide->slide_img            = get_theme_mod( 'slider_' . $i );
-				$slide->slide_text_position  = get_theme_mod( 'slider_text_position_' . $i );
-				$slide->slide_header_message = get_theme_mod( 'slider_header_' . $i );
-				$slide->slide_subheader      = get_theme_mod( 'slider_subheader_' . $i );
-				$slide->slide_link_btn       = get_theme_mod( 'slider_btn_text_' . $i );
-				$slide->slide_link           = get_theme_mod( 'slider_btn_link_' . $i );
-				// Mobile theme mod.
-				$slide->slide_mobile_img     = get_theme_mod( 'slider_mobile_' . $i );
+		if ( ! empty( get_theme_mod( 'slider_1' ) ) ) :
 
-				$mods_class->slides->{"slide_{$i}"}     = $slide;
-			endif;
-		}
-		
-		$mods_class->slides->count            = $count;
-		$mods_class->slides->enable_cta_popup = get_theme_mod( 'enable_hero_popup' ); 
+			$mods_class->slides              = new stdClass();
+			for ( $i = 1; $i <= 5; $i++ ) {
+				if ( ! empty( get_theme_mod( 'slider_' . $i ) ) ) :
+					$count++;
+					$slide                       = new stdClass();
+					$slide->slide_img            = get_theme_mod( 'slider_' . $i );
+					$slide->slide_text_position  = get_theme_mod( 'slider_text_position_' . $i );
+					$slide->slide_header_message = get_theme_mod( 'slider_header_' . $i );
+					$slide->slide_subheader      = get_theme_mod( 'slider_subheader_' . $i );
+					$slide->slide_link_btn       = get_theme_mod( 'slider_btn_text_' . $i );
+					$slide->slide_link           = get_theme_mod( 'slider_btn_link_' . $i );
+					// Mobile theme mod.
+					$slide->slide_mobile_img     = get_theme_mod( 'slider_mobile_' . $i );
 
-		for ( $a = 1; $a <= 3; $a++ ) {
-			// $slide_popup                                    = new stdClass();
-			$mods_class->slides->{ 'cta_popup_title_' . $a }       = get_theme_mod( 'top_slider_description_title_' . $a );
-			$mods_class->slides->{ 'cta_popup_description_' . $a } = get_theme_mod( 'top_slider_description_message' . $a );
-		}
+					$mods_class->slides->{"slide_{$i}"}     = $slide;
+				endif;
+			}
+			
+			$mods_class->slides->count            = $count;
+			$mods_class->slides->enable_cta_popup = get_theme_mod( 'enable_hero_popup' ); 
 
-		$mods_class->slides->cta_popup_button_text = get_theme_mod( 'cta_popup_btn_text' ); 
-		$mods_class->slides->cta_popup_button_link = get_theme_mod( 'cta_popup_btn_link' ); 
+			for ( $a = 1; $a <= 3; $a++ ) {
+				// $slide_popup                                    = new stdClass();
+				$mods_class->slides->{ 'cta_popup_title_' . $a }       = get_theme_mod( 'top_slider_description_title_' . $a );
+				$mods_class->slides->{ 'cta_popup_description_' . $a } = get_theme_mod( 'top_slider_description_message' . $a );
+			}
 
-		return $mods_class;
+			$mods_class->slides->cta_popup_button_text = get_theme_mod( 'cta_popup_btn_text' ); 
+			$mods_class->slides->cta_popup_button_link = get_theme_mod( 'cta_popup_btn_link' ); 
+
+			return $mods_class;
+		endif;
 	endif;
 
 	if ( 'about' === $section ) :
