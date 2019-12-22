@@ -94,16 +94,16 @@ get_header();
 				<section class="top-slider-booknow">
 					<div class="row booknow-row">
 						<div class="col-4 booknow-service-col">
-							<h2 class="service-title"><?php echo wp_kses_data( $top_slider->slides->cta_popup_description_1 ); ?></h2>
-							<p class="service-details"><?php echo wp_kses_data( $top_slider->slides->cta_popup_title_1 ); ?></p>
+							<h2 class="service-title"><?php echo wp_kses_data( $top_slider->slides->cta_popup_title_1 ); ?></h2>
+							<p class="service-details"><?php echo wp_kses_data( $top_slider->slides->cta_popup_description_1 ); ?></p>
 						</div>
 						<div class="col-4 booknow-service-col">
-							<h2 class="service-title"><?php echo wp_kses_data( $top_slider->slides->cta_popup_description_2 ); ?></h2>
-							<p class="service-details"><?php echo wp_kses_data( $top_slider->slides->cta_popup_title_2 ); ?></p>
+							<h2 class="service-title"><?php echo wp_kses_data( $top_slider->slides->cta_popup_title_2 ); ?></h2>
+							<p class="service-details"><?php echo wp_kses_data( $top_slider->slides->cta_popup_description_2 ); ?></p>
 						</div>
 						<div class="col-4 booknow-service-col">
-							<h2 class="service-title"><?php echo wp_kses_data( $top_slider->slides->cta_popup_description_3 ); ?></h2>
-							<p class="service-details"><?php echo wp_kses_data( $top_slider->slides->cta_popup_title_3 ); ?></p>
+							<h2 class="service-title"><?php echo wp_kses_data( $top_slider->slides->cta_popup_title_3 ); ?></h2>
+							<p class="service-details"><?php echo wp_kses_data( $top_slider->slides->cta_popup_description_3 ); ?></p>
 						</div>
 						<div class="col-12"></div>
 					</div>
