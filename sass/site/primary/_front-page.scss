@@ -9,6 +9,7 @@
   // background: rgba($color: #000000, $alpha: .8);
 
   .booknow-row {
+    width: 100%;
     max-width: 1000px;
     border-radius: 10px;
     color: #c5c5c5;
@@ -18,11 +19,33 @@
       display: grid;
       justify-content: center;
       text-align: center;
+      h1 {
+        font-size: 3.8em;
+      }
 
       h2 {
         font-family: $font__teko;
       }
     }
+  }
+
+  @include media-breakpoint( sm ) {
+
+    
+  }
+
+  @include media-breakpoint( md ) {
+    .booknow-row h1 {
+      font-size: 3.5em;
+    }
+  }
+
+  @include media-breakpoint( lg ) {
+    
+  }
+
+  @include media-breakpoint( xl ) {
+    
   }
 }
 
