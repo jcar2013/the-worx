@@ -43,7 +43,7 @@ $footer_section = get_section_mods( 'footer' );
 						<div class="social-icons-btns">
 							<?php
 							if ( ! empty( $footer_section->footer_mods->footer_social_linkedin ) ) {
-								echo '<a href="' . $footer_section->footer_mods->footer_social_linkedin . '" target="_blank"><i class="fa fa-linkedin"></i></a>';
+								echo '<a href="' . $footer_section->footer_mods->footer_social_linkedin . '" target="_blank"><i class="fa fa-instagram"></i></a>';
 							}
 
 							if ( ! empty( $footer_section->footer_mods->footer_social_github ) ) {
