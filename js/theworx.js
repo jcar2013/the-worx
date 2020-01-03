@@ -39,7 +39,7 @@
 		================================================================*/
 		if ( document.querySelector( '.header-slider-section' ) ) 
 		{
-			slide_adjustment();
+			// slide_adjustment();
 			
 			$( '.top-page-slider-wrap' ).slick({
 			  slidesToShow: 1,

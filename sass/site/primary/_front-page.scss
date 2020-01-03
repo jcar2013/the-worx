@@ -1,8 +1,231 @@
-/*======================================       Top slider popu box      =====================================*/
+/*=========================================
+=            front page styles            =
+=========================================*/
+.home {
+
+  video.cta-slide {
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+  }
+
+  section {
+
+    p.price,
+    span.price {
+      font-family: $font__body;
+    }
+
+    a.button.product_type_variable {
+      display: none;
+    }
+  }
+}
+
+/*----------  Header Slider  ----------*/
+section.header-slider-section {
+  position: relative;
+  overflow: hidden;
+  height: 85vh;
+  @include prefix(transition, $trans_1, o moz webkit);
+
+  .top-page-slider-wrap {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    .top-page-slide {
+      position: relative;
+      display: none;
+      width: 100%;
+      height: 100%;
+      @include prefix(transition, $trans_1, o moz webkit);
+
+      div.top-slide-img-holder {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include prefix(background-size, cover, o moz webkit);
+        width: 100%;
+        height: 100%;
+
+        .img-header-text-wrap {
+          margin: auto;
+          width: 100%;
+          height: 100%;
+          align-items: center;
+          max-width: 1200px;
+
+          .img-header-text-container {
+            display: flex;
+            flex-direction: column;
+            // top: 10%;
+
+            .set-align-left {
+              align-self: flex-start;
+            }
+
+            .set-align-center {
+              align-self: center;
+
+            }
+
+            .set-align-right {
+              align-self: flex-end;
+            }
+
+            .text-box {
+              font-weight: bold;
+              color: #c5c5c5;
+              max-width: 1200px;
+              @include prefix(text-shadow, 1px 1px 2px rgba(#000, .8), o moz webkit);
+
+              h1 {
+                margin: 0 auto;
+                font-weight: 400;
+                line-height: 50px;
+                margin-bottom: 25px;
+                font-family: $font__title;
+              }
+
+              h4 {
+                font-family: $font__teko;
+                font-weight: 400;
+                font-style: italic;
+                line-height: 22px;
+                margin-bottom: 15px;
+                white-space: nowrap;
+                @include font-size(1.6);
+              }
+
+              .img-head-slider-link {
+                text-shadow: none;
+              }
+            }
+          }
+        }
+      }
+
+      &:first-child {
+        display: block;
+      }
+    }
+
+    .slick-list {
+      position: relative;
+      height: 100%;
+
+      .slick-track {
+        height: 100%;
+
+        .top-page-slide {
+          display: block;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint(ipx) {
+
+
+    .img-header-text-container .text-box {
+
+      h1 {
+        line-height: 1.1;
+        @include font-size(1.2);
+      }
+
+      h4 {
+        line-height: 1.1;
+        @include font-size(1.1);
+      }
+    }
+  }
+
+  @include media-breakpoint(ip8) {
+
+
+    .img-header-text-container .text-box {
+
+      h1 {
+        line-height: 1.1;
+        @include font-size(1.2);
+      }
+
+      h4 {
+        line-height: 1.1;
+        @include font-size(1.1);
+      }
+    }
+  }
+
+  @include media-breakpoint(ip8p) {
+
+
+    .img-header-text-container .text-box {
+
+      h1 {
+        line-height: 1.1;
+        @include font-size(1.7);
+      }
+
+      h4 {
+        line-height: 1.1;
+        @include font-size(1.1);
+      }
+    }
+  }
+
+  @include media-breakpoint(md) {
+
+
+    .img-header-text-container .text-box {
+
+      h1 {
+        line-height: 1.1;
+        @include font-size(4.5);
+      }
+
+      h4 {
+        line-height: 1.1;
+        @include font-size(1.5);
+      }
+    }
+  }
+
+  @include media-breakpoint(lg) {
+
+
+    .img-header-text-container .text-box {
+
+      h4 {
+        line-height: 1.1;
+        @include font-size(1.8);
+      }
+    }
+  }
+
+  @include media-breakpoint(xl) {
+
+
+    .img-header-text-container .text-box {
+      h4 {
+        line-height: 1.1;
+        @include font-size(2.2);
+      }
+    }
+  }
+}
+
+/*----------  End Header Slider  ----------*/
+
+/*======================================       Top slider popup box      =====================================*/
 .top-slider-booknow {
-  width: 100%;;
+  width: 100%;
   position: absolute;
-  bottom: -25px;
+  top: 80vh;
   display: flex;
   justify-content: center;
   z-index: 15;
@@ -10,18 +233,15 @@
 
   .booknow-row {
     width: 100%;
-    max-width: 1000px;
+    max-width: 85%;
     border-radius: 10px;
     color: #c5c5c5;
     background: rgba($color: #131f2f, $alpha: .9);
 
-    .booknow-service-col{
+    .booknow-service-col {
       display: grid;
       justify-content: center;
       text-align: center;
-      h1 {
-        font-size: 3.8em;
-      }
 
       h2 {
         font-family: $font__teko;
@@ -29,23 +249,11 @@
     }
   }
 
-  @include media-breakpoint( sm ) {
+  @include media-breakpoint(md) {
 
-    
-  }
-
-  @include media-breakpoint( md ) {
-    .booknow-row h1 {
-      font-size: 3.5em;
+    .booknow-row {
+      max-width: 1000px;
     }
-  }
-
-  @include media-breakpoint( lg ) {
-    
-  }
-
-  @include media-breakpoint( xl ) {
-    
   }
 }
 
@@ -55,6 +263,7 @@ section.about {
   background: #070606;
   color: #c5c5c5;
 }
+
 /*------------------ End About me  ------------------*/
 
 /*------------------ Services  ------------------*/
@@ -70,12 +279,13 @@ section.services {
   align-items: center;
 
   .service-title {
-    font-family: $font__teko;;
+    font-family: $font__teko;
+    ;
   }
 
   .card {
     background: rgba($color: #131f2f, $alpha: .95);
-    
+
     ul.list-group {
 
       li {
@@ -84,4 +294,5 @@ section.services {
     }
   }
 }
+
 /*------------------ End Services  ------------------*/
