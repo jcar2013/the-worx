@@ -27,12 +27,12 @@
 /*----------  Header Slider  ----------*/
 section.header-slider-section {
   position: relative;
-  overflow: hidden;
-  height: 68vh;
+  height: 75vh;
   @include prefix(transition, $trans_1, o moz webkit);
 
   .top-page-slider-wrap {
     position: relative;
+    overflow: hidden;
     height: 100%;
     width: 100%;
 
@@ -126,59 +126,7 @@ section.header-slider-section {
     }
   }
 
-  @include media-breakpoint(ipx) {
-
-
-    .img-header-text-container .text-box {
-
-      h1 {
-        line-height: 1.1;
-        @include font-size(1.2);
-      }
-
-      h4 {
-        line-height: 1.1;
-        @include font-size(1.1);
-      }
-    }
-  }
-
-  @include media-breakpoint(ip8) {
-
-
-    .img-header-text-container .text-box {
-
-      h1 {
-        line-height: 1.1;
-        @include font-size(1.2);
-      }
-
-      h4 {
-        line-height: 1.1;
-        @include font-size(1.1);
-      }
-    }
-  }
-
-  @include media-breakpoint(ip8p) {
-
-
-    .img-header-text-container .text-box {
-
-      h1 {
-        line-height: 1.1;
-        @include font-size(1.7);
-      }
-
-      h4 {
-        line-height: 1.1;
-        @include font-size(1.1);
-      }
-    }
-  }
-
   @include media-breakpoint(md) {
-    height: 75vh;
 
     .img-header-text-container .text-box {
 
@@ -223,15 +171,15 @@ section.header-slider-section {
 /*======================================       Top slider popup box      =====================================*/
 .top-slider-booknow {
   width: 100%;
-  position: absolute;
-  top: 59%;
+  position: relative;
+  top: -55px;
   display: flex;
   justify-content: center;
   z-index: 15;
 
   .booknow-row {
     width: 100%;
-    max-width: 85%;
+    max-width: 95%;
     border-radius: 10px;
     color: #c5c5c5;
     background: rgba($color: #131f2f, $alpha: .9);
@@ -241,14 +189,17 @@ section.header-slider-section {
       justify-content: center;
       text-align: center;
 
-      h2 {
+      h3 {
         font-family: $font__teko;
+      }
+
+      p {
+        font-size: .8rem;
       }
     }
   }
 
   @include media-breakpoint(md) {
-    top: 70.5%;
 
     .booknow-row {
       max-width: 75%;
@@ -258,9 +209,11 @@ section.header-slider-section {
 
 /*------------------ About me  ------------------*/
 section.about {
-  padding: 8rem 0;
+  padding: 6.5rem 0;
   background: #070606;
   color: #c5c5c5;
+
+  @include media-breakpoint(md) {}
 }
 
 /*------------------ End About me  ------------------*/

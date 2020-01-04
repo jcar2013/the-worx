@@ -86,33 +86,34 @@ get_header();
 					<?php endforeach; ?>
 
 				</div><!-- .top-page-slider -->
+
+				<?php
+				if ( $top_slider->slides->enable_cta_popup ) :
+					?>
+					<div class="top-slider-booknow">
+						<div class="row booknow-row">
+							<div class="col-4 booknow-service-col">
+								<h3 class="service-title"><?php echo wp_kses_data( $top_slider->slides->cta_popup_title_1 ); ?></h3>
+								<p class="service-details"><?php echo wp_kses_data( $top_slider->slides->cta_popup_description_1 ); ?></p>
+							</div>
+							<div class="col-4 booknow-service-col">
+								<h3 class="service-title"><?php echo wp_kses_data( $top_slider->slides->cta_popup_title_2 ); ?></h3>
+								<p class="service-details"><?php echo wp_kses_data( $top_slider->slides->cta_popup_description_2 ); ?></p>
+							</div>
+							<div class="col-4 booknow-service-col">
+								<h3 class="service-title"><?php echo wp_kses_data( $top_slider->slides->cta_popup_title_3 ); ?></h3>
+								<p class="service-details"><?php echo wp_kses_data( $top_slider->slides->cta_popup_description_3 ); ?></p>
+							</div>
+							<div class="col-12"></div>
+						</div>
+					</div>
+				<?php endif; ?>
+
+
 			</section><!-- .header-slider-section -->
 
-			<?php
-			if ( $top_slider->slides->enable_cta_popup ) :
-				?>
-				<section class="top-slider-booknow">
-					<div class="row booknow-row">
-						<div class="col-4 booknow-service-col">
-							<h2 class="service-title"><?php echo wp_kses_data( $top_slider->slides->cta_popup_title_1 ); ?></h2>
-							<p class="service-details"><?php echo wp_kses_data( $top_slider->slides->cta_popup_description_1 ); ?></p>
-						</div>
-						<div class="col-4 booknow-service-col">
-							<h2 class="service-title"><?php echo wp_kses_data( $top_slider->slides->cta_popup_title_2 ); ?></h2>
-							<p class="service-details"><?php echo wp_kses_data( $top_slider->slides->cta_popup_description_2 ); ?></p>
-						</div>
-						<div class="col-4 booknow-service-col">
-							<h2 class="service-title"><?php echo wp_kses_data( $top_slider->slides->cta_popup_title_3 ); ?></h2>
-							<p class="service-details"><?php echo wp_kses_data( $top_slider->slides->cta_popup_description_3 ); ?></p>
-						</div>
-						<div class="col-12"></div>
-					</div>
-				</section>
-			<?php endif; ?>
+
 		<?php endif; ?>
-
-
-
 
 		<?php
 		do_action( 'get_mods_before_section', 'about' );
