@@ -112,12 +112,12 @@
 	.site-header {
 		position: fixed;
 		width: 100%;
-		background: rgba(0, 0, 0, 0.5);
-		// background: #000;
+		//background: rgba(0, 0, 0, 0.5);
+		background: transparent;
 
 		&.transparent-header {
-			background: #646371;
-		}
+		background: rgba(0, 0, 0, 0.5);
+	}
 		li i.fa-search,
 		li i.fa-shopping-cart {
 			font-size: 20px;

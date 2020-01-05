@@ -27,7 +27,7 @@
 /*----------  Header Slider  ----------*/
 section.header-slider-section {
   position: relative;
-  height: 75vh;
+  height: 72vh;
   @include prefix(transition, $trans_1, o moz webkit);
 
   .top-page-slider-wrap {

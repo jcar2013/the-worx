@@ -19,7 +19,7 @@
       height: 5px;
       margin: 5px 0;
       opacity: 1;
-      background: wheat;
+      background: #ffffff;
       @include prefix(transition, $trans_25, webkit moz o);
 
       &-top {
@@ -173,7 +173,7 @@
 
       .current_page_item>a,
       .current-menu-item>a {
-        color: #ded492;
+        color: #ffffff;
       }
 
       .menu-item-has-children>a {
@@ -194,7 +194,7 @@
         &:hover {
 
           &:after {
-            color: #dad3a2;
+            color: #ffffff;
           }
         }
       }

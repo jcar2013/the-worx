@@ -1,5 +1,15 @@
 ( function( $ )
 {
+	function navbar_collapse()
+	{
+		var intFrame = window.innerHeight;
+		console.log(intFrame);
+		if ($("#masthead").offset().top > intFrame) {
+			$("#masthead").addClass("transparent-header");
+		} else {
+			$("#masthead").removeClass("transparent-header");
+		}
+	}
 
 	function slide_adjustment()
 	{
@@ -32,8 +42,12 @@
   
   window.onload = function()
 	{
-    // footer_adjustment();
-    
+		/*=============================================
+		=            Navbar transparency              =
+		=============================================*/
+		navbar_collapse();
+		$(window).scroll(navbar_collapse);    
+		
 		/*================================================================
 		=            For setting up sliders on the front page            =
 		================================================================*/
