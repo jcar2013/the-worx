@@ -38,7 +38,7 @@ get_header();
 								<?php
 								if ( wp_is_mobile() ) :
 									?>
-								<div class="top-slide-img-holder" data-img-url="<?php echo esc_attr( $slide->slide_mobile_img ); ?>" style="background-image:linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)), url('<?php echo esc_url( $slide->slide_mobile_img ); ?>');">
+								<div class="top-slide-img-holder" data-img-url="<?php echo esc_attr( $slide->slide_mobile_img ); ?>" style="background-image:linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url('<?php echo esc_url( $slide->slide_mobile_img ); ?>');">
 									<?php
 								else :
 									if ( strpos( $slide->slide_img, '.mp4' ) !== false ) {
@@ -51,7 +51,7 @@ get_header();
 											<?php
 									} else {
 										?>
-											<div class="top-slide-img-holder" data-img-url="<?php echo esc_attr( $slide->slide_img ); ?>" style="background-image:linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)), url('<?php echo esc_url( $slide->slide_img ); ?>');">
+											<div class="top-slide-img-holder" data-img-url="<?php echo esc_attr( $slide->slide_img ); ?>" style="background-image:linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url('<?php echo esc_url( $slide->slide_img ); ?>');">
 											<?php
 									}
 								endif;
@@ -66,12 +66,12 @@ get_header();
 											echo wp_kses_data( $set_text_align );
 											?>
 											">
-												<h1 class="img-header-text text-center"><?php echo wp_kses_data( $slide->slide_header_message ); ?></h1>
+												<h1 class="top-slider-header text-center"><?php echo wp_kses_data( $slide->slide_header_message ); ?></h1>
 												<?php
 												/* Checks for an subheader set in the slide object */
 												if ( ! empty( $slide->slide_subheader ) ) :
 													?>
-													<h4 class="img-subheader-text text-center"><?php echo wp_kses_data( $slide->slide_subheader ); ?></h4>
+													<h4 class="top-slider-subheader text-center"><?php echo wp_kses_data( $slide->slide_subheader ); ?></h4>
 												<?php endif; ?>
 											</div><!-- .text-box -->
 										</div><!-- .img-header-text-container -->

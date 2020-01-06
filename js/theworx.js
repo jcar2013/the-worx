@@ -2,9 +2,9 @@
 {
 	function navbar_collapse()
 	{
-		var intFrame = window.innerHeight;
-		console.log(intFrame);
-		if ($("#masthead").offset().top > intFrame) {
+		var slider_frame = document.querySelector( '.header-slider-section' ).offsetHeight;
+		console.log(slider_frame);
+		if ($("#masthead").offset().top > slider_frame) {
 			$("#masthead").addClass("transparent-header");
 		} else {
 			$("#masthead").removeClass("transparent-header");
@@ -60,7 +60,7 @@
 			  slidesToScroll: 1,
 			  autoplay: true,
 			  autoplaySpeed: 4000,
-			  pauseOnFocus: false,
+				pauseOnFocus: false,
 			  pauseOnHover: false,
 			  fade: true,
 			  dots: false,
