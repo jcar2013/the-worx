@@ -4,23 +4,23 @@
   z-index: 100;
   @include prefix(transition, $trans_25, webkit moz o);
 
-  button {
-    position: absolute;
-    top: -3.4rem;
-    right: 0px;
-    background: transparent;
-    border: none;
-    @include prefix(transition, $trans_25, webkit moz o);
+	button {
+		position: absolute;
+		top: -3.4rem;
+		right: -10px;
+		background: transparent;
+		border: none;
+		@include prefix( transition, $trans_25, webkit moz o);
 
-    .hang-a-bur {
-      position: relative;
-      display: block;
-      width: 38px;
-      height: 5px;
-      margin: 5px 0;
-      opacity: 1;
-      background: #ffffff;
-      @include prefix(transition, $trans_25, webkit moz o);
+		.hang-a-bur {
+			position: relative;
+			display: block;
+			width: 38px;
+			height: 3.4px;
+			margin: 6px 0;
+			opacity: 1;
+			background: #ffffff;
+			@include prefix( transition, $trans_25, webkit moz o);
 
       &-top {
         top: 0;
@@ -68,7 +68,7 @@
       opacity: 0;
       overflow: hidden;
       z-index: 100;
-      background: rgba(#ffffff, .9);
+      background: rgba(#000000, .7);
       @include prefix(transition, $trans_25, webkit moz o);
       @include prefix(box-shadow, 0 1px 6px 0 rgba(#000, 0.4), webkit moz o);
 
@@ -200,7 +200,7 @@
       }
 
       @media screen and (max-width: 992px) {
-        background: rgba(#ffffff, 1);
+        // background: rgba(#ffffff, 1);
 
         >li {
           height: 100%;
