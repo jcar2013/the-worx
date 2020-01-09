@@ -45,8 +45,6 @@
 .site-header {
 	position: fixed;
 	background: rgba(255, 255, 255, 0.5);
-	// background: #000;
-	// height: 50px;
 	z-index: 9999;
 	@include prefix( transition, all .3s ease-in-out, o moz webkit );
 
@@ -56,16 +54,14 @@
 
 	.brand-nav-bar {
 		height: 60px;
-		// margin: auto;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		// padding-top: 40px;
-		// max-width: 1200px;
 		@include prefix( transition, all .6s ease-in-out, o moz webkit );
 
 		.branding {
 			height: 100%;
+			right: 2.1rem;
 			display: flex;
 			align-items: center;
 
@@ -94,6 +90,12 @@
 		}
 	}
 
+	.div-nav {
+		// display: flex;
+		// justify-content: flex-end;
+		padding: 0;
+	}
+
 	// @include media-breakpoint( xs ) {
 	// 	height: 60px;
 	// }
@@ -102,9 +104,15 @@
 	// 	height: 60px;
 	// }
 
-	// @include media-breakpoint( md ) {
-	// 	height: 80px;
-	// }
+	@include media-breakpoint( lg ) {
+
+		.brand-nav-bar {
+
+			.branding {
+				right: 0;
+			}	
+		}
+	}
 }
 
 .home {

@@ -3,7 +3,6 @@
 	function navbar_collapse()
 	{
 		var slider_frame = document.querySelector( '.header-slider-section' ).offsetHeight;
-		console.log(slider_frame);
 		if ($("#masthead").offset().top > slider_frame) {
 			$("#masthead").addClass("transparent-header");
 		} else {
@@ -37,7 +36,6 @@
 
   window.onresize = function()
 	{
-		// footer_adjustment();
   };
   
   window.onload = function()
@@ -53,7 +51,6 @@
 		================================================================*/
 		if ( document.querySelector( '.header-slider-section' ) ) 
 		{
-			// slide_adjustment();
 			
 			$( '.top-page-slider-wrap' ).slick({
 			  slidesToShow: 1,
@@ -73,7 +70,6 @@
 		{
 			
 			$( '.cta-section-slider-wrap' ).slick({
-			  // adaptiveHeight: true,
 			  slidesToShow: 1,
 			  slidesToScroll: 1,
 			  autoplay: true,
