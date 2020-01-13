@@ -11,7 +11,7 @@
     justify-content: flex-end;
     clear: both;
     z-index: 100;
-    @include prefix(transition, $trans_25, webkit moz o);
+    @include prefix(transition, $trans_45, webkit moz o);
 
     button {
       position: absolute;
@@ -27,7 +27,6 @@
         width: 38px;
         height: 3.4px;
         margin: 6px 0;
-        opacity: 1;
         background: #ffffff;
         @include prefix( transition, $trans_25, webkit moz o);
 
@@ -66,7 +65,8 @@
     >div {
       position: relative;
       top: -60px;
-      height: 100vh;
+      height: 0;
+      transition: all 3.3s ease-in;
       width: 150px;
       background: rgba(#000000, .7);
 
@@ -78,7 +78,6 @@
         text-align: center;
         margin: 0;
         padding: 0;
-        opacity: 1;
         overflow: hidden;
         z-index: 100;
         // background: rgba(#000000, .7);
@@ -197,9 +196,16 @@
           }
         }
       }
+    }
 
-      @include media-breakpoint(lg) {
+    @include media-breakpoint(lg) {
+      margin: 0;
+
+      >div {
         width: 100%;
+        top: 0;
+        height: unset;
+        background-color: transparent;
 
         >ul {
           display: flex;
@@ -207,7 +213,6 @@
           background: transparent;
           overflow: visible;
           top: 0;
-          opacity: 1;
           @include prefix(box-shadow, 0 1px 6px 0 rgba(#000, 0), webkit moz o);
 
 
@@ -244,11 +249,17 @@
   button {
     right: 140px;
   }
-  ul#primary-menu,
-  ul#cart-menu {
-    height: auto;
-    overflow: visible;
-    // opacity: 1;
+
+  div.menu-primary-container {
+    height: 100vh;
+    transition: all .10s ease-in;
+    
+    ul#primary-menu,
+    ul#cart-menu {
+      height: auto;
+      overflow: visible;
+      // opacity: 1;
+    }
   }
 }
 
