@@ -19,7 +19,7 @@
       right: 165px;
       background: transparent;
       border: none;
-      @include prefix( transition, $trans_25, webkit moz o);
+      @include prefix(transition, $trans_25, webkit moz o);
 
       .hang-a-bur {
         position: relative;
@@ -28,7 +28,7 @@
         height: 3.4px;
         margin: 6px 0;
         background: #ffffff;
-        @include prefix( transition, $trans_25, webkit moz o);
+        @include prefix(transition, $trans_25, webkit moz o);
 
         &-top {
           top: 0;
@@ -66,9 +66,8 @@
       position: relative;
       top: -60px;
       height: 0;
-      transition: all 3.3s ease-in;
       width: 150px;
-      background: rgba(#000000, .7);
+      // background: rgba(#000000, .7);
 
       // Stoped cleaning code here
       >ul {
@@ -80,7 +79,9 @@
         padding: 0;
         overflow: hidden;
         z-index: 100;
-        // background: rgba(#000000, .7);
+        height: 100vh;
+        transition: all 3.3s ease-in;
+        background: rgba(#000000, .7);
         @include prefix(transition, $trans_25, webkit moz o);
         @include prefix(box-shadow, 0 1px 6px 0 rgba(#000, 0.4), webkit moz o);
 
@@ -251,14 +252,12 @@
   }
 
   div.menu-primary-container {
-    height: 100vh;
-    transition: all .10s ease-in;
-    
+
     ul#primary-menu,
     ul#cart-menu {
-      height: auto;
+      height: 100vh;
       overflow: visible;
-      // opacity: 1;
+      transition: all .10s ease-in-out;
     }
   }
 }
