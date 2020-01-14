@@ -7,7 +7,6 @@
 ( function() {
 	var container, button, menu, links, i, len;
 
-	container = document.getElementById( '.' );
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container ) {
 		return;
@@ -36,20 +35,21 @@
 			container.className = container.className.replace( ' toggled', '' );
 			button.setAttribute( 'aria-expanded', 'false' );
 			menu.setAttribute( 'aria-expanded', 'false' );
+
 		} else {
 			container.className += ' toggled';
 			button.setAttribute( 'aria-expanded', 'true' );
 			menu.setAttribute( 'aria-expanded', 'true' );
+			
 		}
 	};
 
 	document.addEventListener( "mouseup",  function( e ) {
 		e.preventDefault();
-		if ( e.target !== menu && !menu.contains(e.target)) {
-			console.log(e);
-			container.className = container.className.replace( ' toggled', '' );
-			button.setAttribute( 'aria-expanded', 'false' );
-			menu.setAttribute( 'aria-expanded', 'false' );
+		if ( e.target !== menu && !menu.contains(e.target) && !button.contains(e.target)) {
+				container.className = container.className.replace( ' toggled', '' );
+				button.setAttribute( 'aria-expanded', 'false' );
+				menu.setAttribute( 'aria-expanded', 'false' );
 		}
 
 	} );
