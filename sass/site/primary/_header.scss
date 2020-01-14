@@ -44,13 +44,14 @@
 ==================================================*/
 .site-header {
 	padding: 0 20px;
-	position: fixed;
-	background: rgba(255, 255, 255, 0.5);
+	position: relative;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.7);
 	z-index: 9999;
 	@include prefix( transition, all .3s ease-in-out, o moz webkit );
 
 	&.transparent-header {
-		background: #000;
+		background: rgba(0, 0, 0, 0.7);
 	}
 
 	.brand-nav-bar {
@@ -114,7 +115,7 @@
 
 	.site-header {
 		position: fixed;
-		width: 100%;
+	// 	width: 100%;
 		background: transparent;
 
 		&.transparent-header {
