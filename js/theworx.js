@@ -43,9 +43,12 @@
 		/*=============================================
 		=            Navbar transparency              =
 		=============================================*/
-		navbar_collapse();
-		$(window).scroll(navbar_collapse);    
-		
+		if ( document.querySelector( '.header-slider-section' ) )
+		{
+			navbar_collapse();
+			$(window).scroll(navbar_collapse);    
+		}
+
 		/*================================================================
 		=            For setting up sliders on the front page            =
 		================================================================*/
